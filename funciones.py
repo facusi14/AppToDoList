@@ -18,7 +18,7 @@ def mostrar_tareas():
 def marca_completada():
     indice = int(input("Ingrese el indice de la tarea que quiere marcar como completada"))
     indice = indice - 1
-    while indice <= 0 or indice >= len(tareas):
+    while indice < 0 or indice >= len(tareas):
         print(f"Ingrese un indice correcto")
         indice = int(input("Ingrese el indice de la tarea que quiere marcar como completada"))
         
@@ -35,5 +35,16 @@ def marca_completada():
     
 
 def eliminar_tarea():
-    pass
+    indice = int(input("Ingrese el indice de la tarea que quiere eliminar"))
+    indice = indice - 1
+    
+    while indice < 0 or indice >= len(tareas):
+        print(f"Ingrese un indice correcto")
+        indice = int(input("Ingrese el indice de la tarea que quiere eliminar"))
+    
+    tarea_eliminada = tareas.pop(indice)
+    
+    nombre_tarea_eliminada = tarea_eliminada["nombre"]
+    
+    print(f"La tarea {nombre_tarea_eliminada} ha sido borrada")
 
