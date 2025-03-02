@@ -3,7 +3,7 @@ from funciones import *
 
 while True:
     print("MENU:")
-    print("1.Agregar tarea")
+    print("1.Agregar nuevo pedido")
     print("2.Mostrar tareas")
     print("3.Marcar tarea como completada")
     print("4.Eliminar tarea")
@@ -12,13 +12,13 @@ while True:
     opcion = input("Seleccione una opcion: ")
     
     if opcion == "1":
-        agregar_tarea()
+        agregar_nuevo_pedido()
     elif opcion == "2":
-        mostrar_tareas()
+        pass
     elif opcion == "3":
-        marca_completada()
+        pass
     elif opcion == "4":
-        eliminar_tarea()
+        pass
     else:
         print("Saliendo del programa... ")
         break
